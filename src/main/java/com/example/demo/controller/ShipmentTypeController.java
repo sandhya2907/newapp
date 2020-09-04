@@ -26,6 +26,7 @@ public class ShipmentTypeController {
 	@RequestMapping("/register")
 	public String showRegister(Model model) {
 		model.addAttribute("shipment", new ShipmentType());
+	
 		return "ShipmentTypeRegister";
 		
 	}
