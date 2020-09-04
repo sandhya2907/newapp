@@ -5,5 +5,6 @@ import org.slf4j.LoggerFactory;
 
 public class WhUserType {
 	private static Logger log=LoggerFactory.getLogger(WhUserType.class);
+ 
+ }
 
-}
