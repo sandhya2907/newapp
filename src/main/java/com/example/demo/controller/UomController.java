@@ -24,6 +24,7 @@ public class UomController {
 	@RequestMapping("/register")
 	public String showRegister(Model model) {
 		model.addAttribute("uom", new Uom());
+		System.out.println("hello");
 		return "UomRegisterPage";
 	}
 
