@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+</head>
+<body>
+<h3>WELCOME TO ORDER METHODE REGISTER PAGE</h3>
+<form th:action="@{/om/save}" method="post" th:object="${om}">
+<pre>
+
+ORDER MODE:    <input type="radio" th:field="*{orderMode}" value="SALE">SALE    <input type="radio" th:field="*{orderMode}" value="PURCHASE">PURCHASE
+
+ORDER CODE:     <input type="text" th:field="*{orderCode}"/>
+
+ORDER TYPE: <select th:field="*{orderType}">
+<option value="">-SELECT-</option>
+<option value="FIFO">FIFO</option>
+<option value="LIFO">LIFO</option>
+<option value="FCFO">FCFO</option>
+<option value="FEFO">FEFO</option>
+
+
+</select>
+
+ORDER ACCEPT:<input type="checkbox" th:field="*{orderAccept}" value="MULTI-MODEL">MULTI-MODEL
+             <input type="checkbox" th:field="*{orderAccept}" value="ACCEPT-RETURN">ACCEPT-RETURN
+             
+
+DESCRIPTION:<textarea th:field="*{orderDescption}"></textarea>
+
+</pre>
+<input type="submit"  value=Register>
+</form>
+<span th:text="${msg}"></span>
+</body>
+</html>
